@@ -7,6 +7,5 @@ def is_base_64(value: str) -> bool:
     try:
         b64decode(value, validate=True)
         return True
-    # pylint: disable=bare-except
-    except:
+    except:  # noqa: E722
         return False
